@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CuteOs</title>
   <link rel="stylesheet" href="style.css">
-  <title>KaoriOS</title>
 </head>
 
 <body>
+    <div class="top-bar">
+        <div class="os-name">🌸 CuteOS</div>
+        <p>♡ Hello World ♡</p>
+        <p id="timeElement">Loading time...</p>
+    </div>
 
-  <h1>Welcome to KaoriOS!</h1>
-  <h2>About me</h2>
-  <p>Hello! I'm Kaori.<br>I enjoy drawing, programming, and mathematics.</p>
-  <img src="https://i.scdn.co/image/ab6761610000e5eb2be67a75020706233ade44c2" alt="A picture representing me">
-  <h2>My interests</h2>
+    <div class="desktop">
+        <div class="desktop-icon">
+            <span class="emoji">📁</span>
+            My Files
+        </div>
 
-  <p><strong>Welcome to my personal OS!</strong></p>
-  <a href="https://github.com/">My GitHub</a>
+        <div class="desktop-icon">
+            <span class="emoji">🎨</span>
+            My Art
+        </div>
+
+        <div class="window">
+
+            <div class="window-header">
+                <span>♡ Welcome.exe</span>
+                <span>● ● ●</span>
+            </div>
+
+            <div class="window-content">
+                <h1>Welcome to CuteOS!</h1>
+                <p>Hello! 🌷<br>Welcome to my little digital world.</p>
+                <button class="cute-button" onclick="sayHello()">Click me! ♡</button>
+                <p id="message" style="margin-top: 18px; margin-bottom: 0;"></p>
+            </div>
+        </div>
+    </div>
+  <script src="script.js"></script>
 </body>
-
 </html>
