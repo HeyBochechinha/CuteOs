@@ -1,45 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CuteOs</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuteOS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="top-bar">
-        <div class="os-name">🌸 CuteOS</div>
-        <p>♡ Hello World ♡</p>
-        <p id="timeElement">Loading time...</p>
-    </div>
+    <header class="topbar">
+        <span class="os-name">♡ CuteOS</span>
+    </header>
 
-    <div class="desktop">
-        <div class="desktop-icon">
-            <span class="emoji">📁</span>
-            My Files
+    <main class="desktop">
+        <div class="desktop-icons">
+            <button class="app-icon" data-window="welcome">
+                <span class="icon">🏠</span>
+                <span>Welcome</span>
+            </button>
+
+            <button class="app-icon" data-window="files">
+                <span class="icon">🎨</span>
+                <span>Drawing Studio</span>
+            </button>
+
+            <button class="app-icon" data-window="catsDogs">
+                <span class="icon">📸</span>
+                <span>Photos</span>
+            </button>
         </div>
 
-        <div class="desktop-icon">
-            <span class="emoji">🎨</span>
-            My Art
-        </div>
-
-        <div class="window">
-
+        <section class="window" id="welcome" data-title="Welcome">
             <div class="window-header">
-                <span>♡ Welcome.exe</span>
-                <span>● ● ●</span>
+                <span>Welcome</span>
+                <div class="window-buttons">
+                    <button class="minimize" title="Minimize">−</button>
+                    <button class="close" title="Close">×</button>
+                </div>
+            </div>
+
+            <div class="window-content welcome-content">
+                <img src="image/welcome.gif" alt="Cute animated GIF" class="welcome-gif">
+                <h2>Welcome to CuteOS!</h2>
+                <p>A little corner of the internet made with love ♡</p>
+                <p>Click an app to explore!</p>
+            </div>
+        </section>
+        
+        <section class="window" id="files" data-title="Drawing Studio">
+            <div class="window-header">
+                <span>Drawing Studio</span>
+                <div class="window-buttons">
+                    <button class="minimize" title="Minimize">−</button>
+                    <button class="close" title="Close">×</button>
+                </div>
+            </div>
+
+            <div class="window-content drawing-content">
+                <div class="drawing-tools">
+                    <label for="brushColor">Color</label>
+                    <input type="color" id="brushColor" value="#d979a6">
+                    <label for="brushSize">Size</label>
+                    <input type="range" id="brushSize" min="1" max="30" value="5">
+                    <span id="brushSizeLabel">5 px</span>
+                </div>
+
+                <div class="drawing-buttons">
+                    <button id="eraserBtn">🩹 Eraser</button>
+                    <button id="clearCanvasBtn">🗑️ Clear</button>
+                    <button id="downloadCanvasBtn">💾 Save PNG</button>
+                </div>
+
+                <div class="canvas-container">
+                    <canvas id="drawingCanvas" aria-label="Drawing area"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="window" id="catsDogs" data-title="Cats & Dogs">
+            <div class="window-header">
+                <span>Gallery</span>
+                <div class="window-buttons">
+                    <button class="minimize" title="Minimize">−</button>
+                    <button class="close" title="Close">×</button>
+                </div>
             </div>
 
             <div class="window-content">
-                <h1>Welcome to CuteOS!</h1>
-                <p>Hello! 🌷<br>Welcome to my little digital world.</p>
-                <button class="cute-button" onclick="sayHello()">Click me! ♡</button>
-                <p id="message" style="margin-top: 18px; margin-bottom: 0;"></p>
+
+                <div class="animal-gallery">
+                    <div class="animal-card">
+                        <img src="image/cat.png" alt="A cute cat">
+                        <p>Cat</p>
+                    </div>
+
+                    <div class="animal-card">
+                        <img src="image/dog.png" alt="A cute dog">
+                        <p>Dog</p>
+                    </div>
+
+                    <div class="animal-card">
+                        <img src="image/miku.png" alt="A cute cat">
+                        <p>Miku</p>
+                    </div>
+
+                    <div class="animal-card">
+                        <img src="image/teto.png" alt="A cute cat">
+                        <p>Teto</p>
+                    </div>
+
+                    <div class="animal-card">
+                        <img src="image/star.png" alt="A cute cat">
+                        <p>Stardance</p>
+                    </div>
+
+                    <div class="animal-card">
+                        <img src="image/pi.png" alt="A cute cat">
+                        <p>PI</p>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-  <script src="script.js"></script>
+        </section>
+</main>
+
+    <footer class="taskbar">
+        <div id="taskbarApps"></div>
+        <span id="clock">20:00</span>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
